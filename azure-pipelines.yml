@@ -1,5 +1,8 @@
 trigger:
-- '*'
+- 'main'
+
+pr:
+- 'main'
 
 variables:
   buildConfiguration: 'Release'
