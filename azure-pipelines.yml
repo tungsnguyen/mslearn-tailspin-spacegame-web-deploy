@@ -17,7 +17,7 @@ schedules:
   always: false
 
 stages:
-- stage: 'Build 1'
+- stage: 'Build_1'
   displayName: 'Build the web application 1'
   condition: eq(variables['Build.Reason'], 'IndividualCI')
   jobs: 
@@ -78,7 +78,7 @@ stages:
     - publish: '$(Build.ArtifactStagingDirectory)'
       artifact: drop
 
-- stage: 'Build 2'
+- stage: 'Build_2'
   displayName: 'Build the web application 2'
   condition: eq(variables['Build.Reason'], 'PullRequest')
   jobs: 
