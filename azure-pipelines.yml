@@ -18,8 +18,7 @@ schedules:
 
 stages:
 - stage: 'Build_1'
-  displayName: 'Build the web application 1'
-  condition: eq(variables['Build.Reason'], 'IndividualCI')
+  displayName: 'Build the web application 1'  
   jobs: 
   - job: 'Build'
     displayName: 'Build job'
@@ -80,7 +79,7 @@ stages:
 
 - stage: 'Build_2'
   displayName: 'Build the web application 2'
-  condition: eq(variables['Build.Reason'], 'PullRequest')
+  condition: eq(variables['Build.SourceBranchName'], variables['main'])
   jobs: 
   - job: 'Build'
     displayName: 'Build job'
